@@ -148,7 +148,7 @@ abstract class BaseSearchDriver implements SearchDriverInterface
             }
         }
 
-        return \DB::raw( implode(' + ', $query) . ' AS ' . $this->relevanceFieldName);
+        return \DB::raw( implode(' + ', $query) . ' ' . $this->relevanceFieldName);
     }
 
 
